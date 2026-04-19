@@ -24,7 +24,18 @@ float maxi(vector<float> v){
 }
 
 int main(){
-    vector<float> v = {50, 70, 77, 10, 40, 39};
+    vector<float> v;
+
+    char yn = 'y';
+    while(yn == 'y'){
+        cout << "Enter a number: ";
+        float f;
+        cin >> f;
+        v.push_back(f);
+        cout << "Enter another number? y/n: ";
+        cin >> yn;
+    }
+
     cout << avg(v) << endl;
     cout << mini(v) << endl;
     cout << maxi(v) << endl;
